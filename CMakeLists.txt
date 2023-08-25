@@ -91,7 +91,7 @@ if(CMAKE_BUILD_TYPE STREQUAL "")
   message(FATAL_ERROR "Setting CMAKE_BUILD_TYPE is required")
 endif()
 
-if(NOT CMAKE_SKIP_INSTALL_RULES)
+#if(NOT CMAKE_SKIP_INSTALL_RULES)
   include(CMakePackageConfigHelpers)
 
   install(
@@ -146,7 +146,7 @@ if(NOT CMAKE_SKIP_INSTALL_RULES)
     ${CMAKE_CURRENT_BINARY_DIR}/assert/assert-config-version.cmake
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/assert
   )
-endif()
+#endif()
 
 # Don't run tests when library is used with add_subdirectory
 if(PROJECT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
